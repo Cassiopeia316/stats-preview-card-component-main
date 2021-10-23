@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.main-container{
+    width : 75vw;
+    height : 60vh;
+    background-color: hsl(244, 38%, 16%);
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    border-radius: 10px;
+    overflow : hidden;
+}
+
+.main-container > .image-container, .main-container > .text-container{
+    width: 50%;
+    height: 100%;
+    float: right;
+    background-color:hsl(277, 64%, 61%);
+}
+.main-container > .text-container{
+    background-color: transparent;
+    float: left;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.main-container > .image-container >img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.main-container > .text-container > div{
+    width: 75%;
+    height: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.main-container > .text-container > div > *{
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.main-container > .text-container > .title > h1 > span {
+    color:hsl(277, 64%, 61%);
+}
+
+.main-container > .text-container > .text > p{
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+.main-container > .text-container > .complementary{
+    margin-top: 1%;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.main-container > .text-container > .complementary > div{
+    height: 62.5%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.main-container > .text-container > .complementary > div > p{
+    font-size: 12px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    background-color: hsl(233, 47%, 7%);
+}
+
+.attribution > p{
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+@media screen and (max-width: 375px) {
+    .main-container{
+        width: 75vw;
+        height: 85vh;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .main-container > .image-container, .main-container > .text-container{
+        float: initial;
+        width: 100%;
+    }
+    .main-container > .image-container {
+        height: 35%;
+    }
+    .main-container > .text-container {
+        height: 65%;
+    }
+    .main-container > .text-container > div {
+        text-align: center;
+        width: 75%;
+    }
+    .main-container > .text-container > .title > h1 {
+        font-size: 1.25rem; /* 20px */
+    }
+    .main-container > .text-container > .text > p {
+        font-size: 11px;
+        letter-spacing: initial;
+        line-height: 1.25rem;
+    }
+    .main-container > .text-container > .complementary{
+        flex-direction: column;
+        height:50%;
+    }
+    .main-container > .text-container > .complementary > div > h3{
+        font-size: 1rem;
+    }
+    .main-container > .text-container > .complementary > div > p{
+        font-size: 10px;
+    }
+    .attribution > p{
+        text-align: center;
+        font-size: 9px;
+        width: 100%;
+    }
+}
